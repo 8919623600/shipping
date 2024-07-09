@@ -1,7 +1,12 @@
 @Library('shared-library') _
 
-env.COMPONENT="SHIPPING"   // this is how variable is declared and this we can call from shared library
+node('ws') {
 
-// call is the function that will be called by default. so, we are declaring the entire pipeline in the vars/java.groovy
+env.COMPONENT="shipping"   // this is how variable is declared and this we can call from shared library
+env.APPTYPE="java"
+env.TAG_NAME="latest"
 
-java()
+docker()
+
+      
+}
